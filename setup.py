@@ -27,12 +27,12 @@ VERSION = '0.2.0'
 LICENSE='BSD'
 
 REQUIRED = [
-    'vak', 'crowsetta>=2.1.0'
+    'tensorflow>=2.0'
 ]
 
 # What packages are optional?
 EXTRAS = {
-    'article': ['joblib', 'pandas', 'seaborn', 'jupyterlab'],
+    'article': ['vak', 'crowsetta>=2.1.0', 'joblib', 'pandas', 'seaborn', 'jupyterlab'],
 }
 
 # The rest you shouldn't have to touch too much :)
