@@ -27,7 +27,7 @@ VERSION = '0.2.0'
 LICENSE='BSD'
 
 REQUIRED = [
-    'tensorflow>=2.0'
+    'tensorflow>=2.0', 'attrs'
 ]
 
 # What packages are optional?
@@ -111,7 +111,8 @@ setup(
     packages=find_packages(where="src", exclude=('tests',)),
     package_dir={"": "src"},
     entry_points={
-        'vak.network': 'TweetyNet = tweetynet.model:TweetyNet',
+        'vak.models': 'TweetyNet = tweetynet:TweetyNet',
+        'vak.model_config_parsers': 'TweetyNet = tweetynet.config:parse',
         'crowsetta.format': 'yarden = gardner.yarden2annot'
     },
     install_requires=REQUIRED,
